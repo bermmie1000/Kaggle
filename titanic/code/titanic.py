@@ -12,3 +12,9 @@ lr = linear_model.LogisticRegression(random_state=0)
 lr.fit(train, test)
 lr.score(train, test)
 # %%
+train.dtypes
+
+
+# %%
+train
+# %%
