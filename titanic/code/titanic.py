@@ -26,9 +26,9 @@ train.Sex = train.Sex.apply(lambda x: 0 if x == "male" else 1)
 train = train.dropna(axis=0)
 train.Embarked = LabelEncoder().fit_transform(train.Embarked)
 
-#%%
 test = test.drop(columns=["PassengerId", "Name", "Cabin", "Ticket"])
 test.Sex = test.Sex.apply(lambda x: 0 if x == "male" else 1)
+test = test.dropna(axis=0)
 test.Embarked = LabelEncoder().fit_transform(test.Embarked)
 
 #%%
@@ -45,3 +45,10 @@ lr.score(X_train, y_train)
 
 # %%
 pd.DataFrame(X.columns, lr.coef_[0])
+
+# %%
+pred = lr.predict(test)
+#%%
+
+# %%
+len(pred)
