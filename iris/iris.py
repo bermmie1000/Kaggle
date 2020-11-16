@@ -24,5 +24,5 @@ Xy.rename(
 px.scatter(Xy, x="pw", y="pl", color="target")
 
 #%%
-Xy.iloc[:, :-1].corr()
-
+px.scatter_matrix(Xy, dimensions=["pw", "pl", "sw", "sl"], color="target")
+#%%
